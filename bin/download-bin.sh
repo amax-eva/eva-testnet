@@ -24,6 +24,7 @@ which beacon-chain
 # /usr/local/bin/beacon-chain
 
 beacon-chain --version
+# beacon-chain version Prysm/v6.0.4/91b44360fcd74bad41f38b79bb3b05094408a2d0. Built at: 2025-06-05 16:21:20+00:00
 
 ## beacon-chain
 wget https://github.com/OffchainLabs/prysm/releases/download/v6.0.4/validator-v6.0.4-linux-amd64
@@ -31,5 +32,7 @@ cp validator-v6.0.4-linux-amd64 /usr/local/bin/validator
 chmod +x /usr/local/bin/validator
 
 which validator
+# /usr/local/bin/validato
 
 validator --version
+# validator version Prysm/v6.0.4/91b44360fcd74bad41f38b79bb3b05094408a2d0. Built at: 2025-06-05 16:21:20+00:00
