@@ -1,2 +1,4 @@
 
-export EXTIP=$(curl -s ifconfig.me)
+echo EXTIP=$(curl -s ifconfig.me) > .env
+source .env
+echo $EXTIP

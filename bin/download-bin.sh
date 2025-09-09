@@ -16,8 +16,8 @@ erigon --version
 
 ## beacon-chain
 
-wget https://github.com/OffchainLabs/prysm/releases/download/v6.0.4/beacon-chain-v6.0.4-darwin-amd64
-cp beacon-chain-v6.0.4-darwin-amd64 /usr/local/bin/beacon-chain
+wget https://github.com/OffchainLabs/prysm/releases/download/v6.0.4/beacon-chain-v6.0.4-linux-amd64
+cp beacon-chain-v6.0.4-linux-amd64 /usr/local/bin/beacon-chain
 chmod +x /usr/local/bin/beacon-chain
 
 which beacon-chain
