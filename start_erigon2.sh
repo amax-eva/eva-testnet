@@ -21,5 +21,5 @@ nohup erigon --networkid=2248 \
   --metrics.addr=0.0.0.0 \
   --metrics.port=9001 \
   --torrent.port=42069 \
-  --bootnodes="enode://62480a73be3430235916a024f0e1303d272e4c3f7b6b18c1fbbbd65a5baa475a7e56977c8c39c2274f33e6f00b93c8ebe8678e82dd448762acd94d669669702e@18.163.81.118:30303" \
+  --bootnodes="enode://0cc02cb26258969f360fe737561f3d29c9f180ad605b65f6f648f7a4165ac1245f45383476a3eaec6e69c0cd58ff9ce03d315a582085a8447d661f049d7d502c@18.163.81.118:30303" \
   > $PWD/erigon.log 2>&1 &

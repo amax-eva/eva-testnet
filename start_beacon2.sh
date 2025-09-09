@@ -27,5 +27,5 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
-  --bootstrap-node="enr:-Mq4QKuE7pTYgJMJhMpQ9fCcFJVj48YmK0zdcEnPTZLg_-NzA-Wco0U5Vrz6cWUC0CbUf3o2-oAM3n2QrBaUAC-Ll2KGAZktc_Bxh2F0dG5ldHOIAAAAAAAAAAOEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhAk_1TANvfA5-hHIzVjL1q8zXfiVPX1qWsdaX_P_mDqCdiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g" \
+  --bootstrap-node="enr:-Mq4QIeQ8KswDJtRfsoPKk9-IEYYJBaQRdtuLyc-0dnoWl4-GBFghf66ORxJFFokiVJi3sPyms2KpdzvEZN7CmO-lK2GAZktf3T1h2F0dG5ldHOIAAAAAIABAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
