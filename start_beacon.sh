@@ -13,7 +13,7 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \
   --min-sync-peers=0 \
-  --verbosity=info \
+  --verbosity=debug \
   --slots-per-archive-point=32 \
   --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
   --jwt-secret=$PWD/jwt.hex \
