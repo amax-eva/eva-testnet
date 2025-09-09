@@ -1,0 +1,31 @@
+
+nohup beacon-chain --chain-id=2248 --network-id=2248 \
+  --accept-terms-of-use=true \
+  --datadir=$PWD/prysm/beacon-data/ \
+  --execution-endpoint=http://$EXTIP:8551 \
+  --rpc-host=0.0.0.0 \
+  --rpc-port=4000 \
+  --http-host=0.0.0.0 \
+  --http-cors-domain=* \
+  --http-port=3500 \
+  --p2p-host-ip=$EXTIP \
+  --p2p-tcp-port=13000 \
+  --p2p-udp-port=12000 \
+  --p2p-quic-port=13000 \
+  --min-sync-peers=0 \
+  --verbosity=info \
+  --slots-per-archive-point=32 \
+  --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
+  --jwt-secret=$PWD/jwt.hex \
+  --disable-monitoring=false \
+  --monitoring-host=0.0.0.0 \
+  --monitoring-port=8080 \
+  --pprof \
+  --pprofaddr=0.0.0.0 \
+  --pprofport=6060 \
+  --p2p-static-id=true \
+  --chain-config-file=$PWD/network-configs/config.yaml \
+  --genesis-state=$PWD/network-configs/genesis.ssz \
+  --contract-deployment-block=0 \
+  --bootstrap-node=enr:-Mq4QPVpZBBBC_ZhFIk1Q_ulP-eqECn8aetS6CIqVJXbe9pofR7akfAexP8-yAwYgyBxSphdoG2i4w6IeW3fSejyyJiGAZksncQXh2F0dG5ldHOIAAAAAAAAAAaEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhArVXXjAs-I9n8im2A3vtb337nfSDRXkuTSCwHLbma3lZiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g \
+  > $PWD/beacon.log 2>&1 &
