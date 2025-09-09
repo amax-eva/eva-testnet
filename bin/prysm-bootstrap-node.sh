@@ -1,0 +1,1 @@
+curl http://18.163.81.118:3500/eth/v1/node/identity | jq -r '.data.enr'
