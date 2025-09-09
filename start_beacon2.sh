@@ -27,5 +27,6 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
+  --checkpoint-sync-url=http://18.163.81.118:3500 \
   --bootstrap-node="enr:-Mq4QKc6jiqaO7_8GrZhx5jPmw3cSwbJ2L2hMrPZ9T0lERBoYvaW_k9C7c8hh2MirzNwHhfOX3J40I7Ts28PMldur7GGAZktf3T2h2F0dG5ldHOIAAAAAIABAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g","enr:-Mq4QLNbgSBINpouwL9N7z7o8q4l61ZXiVXLGifDrvZ94ztdfzz3MgKQ7HFy_kBR7hCZikJ8uXi-f4HWeiJnjWDuIhmGAZktgqMuh2F0dG5ldHOIAAAAAACAAQCEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBCjYQ2EcXVpY4IyyIlzZWNwMjU2azGhAsTb7-gi97EquJelBdOuJxiLZnm-YolSIn8UpE4VXSCwiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
