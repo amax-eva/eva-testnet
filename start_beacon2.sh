@@ -28,5 +28,5 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
   --checkpoint-sync-url=http://18.163.81.118:3500 \
-  --bootstrap-node="enr:-Mq4QEg0jjSA1C95Ed_ai40ZMhCAQJz7skfCfosGeAiwIk0lZW5UZ2_I8iRAk_joXYQSBahjPGmwBfjZlizGvAvw3XyGAZktf3T3h2F0dG5ldHOIAAADAAAAAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g","enr:-Mq4QLNbgSBINpouwL9N7z7o8q4l61ZXiVXLGifDrvZ94ztdfzz3MgKQ7HFy_kBR7hCZikJ8uXi-f4HWeiJnjWDuIhmGAZktgqMuh2F0dG5ldHOIAAAAAACAAQCEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBCjYQ2EcXVpY4IyyIlzZWNwMjU2azGhAsTb7-gi97EquJelBdOuJxiLZnm-YolSIn8UpE4VXSCwiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g" \
+  --bootstrap-node="enr:-Mq4QEg0jjSA1C95Ed_ai40ZMhCAQJz7skfCfosGeAiwIk0lZW5UZ2_I8iRAk_joXYQSBahjPGmwBfjZlizGvAvw3XyGAZktf3T3h2F0dG5ldHOIAAADAAAAAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
