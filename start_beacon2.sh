@@ -12,7 +12,7 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --p2p-tcp-port=13000 \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \
-  --min-sync-peers=1 \
+  --min-sync-peers=0 \
   --p2p-max-peers=5 \
   --no-discovery=true \
   --verbosity=debug \
@@ -29,6 +29,6 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
-  --peer="/ip4/18.163.81.118/tcp/13000/p2p/16Uiu2HAmU4pr4m7E93NZvzMo6vrYjgYPcCoaAvAnUmnx2MRPMBy9" \
-  --bootstrap-node="enr:-Mq4QIeQ8KswDJtRfsoPKk9-IEYYJBaQRdtuLyc-0dnoWl4-GBFghf66ORxJFFokiVJi3sPyms2KpdzvEZN7CmO-lK2GAZktf3T1h2F0dG5ldHOIAAAAAIABAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" \
+  --peer="/ip4/18.163.81.118/tcp/13000/p2p/16Uiu2HAmU4pr4m7E93NZvzMo6vrYjgYPcCoaAvAnUmnx2MRPMBy9","/ip4/16.163.97.13/tcp/13000/p2p/16Uiu2HAm8g8QHXNLBGLvawLCiira6EafQavE458fypG3C98fyk8F" \
+  --bootstrap-node="enr:-Mq4QEg0jjSA1C95Ed_ai40ZMhCAQJz7skfCfosGeAiwIk0lZW5UZ2_I8iRAk_joXYQSBahjPGmwBfjZlizGvAvw3XyGAZktf3T3h2F0dG5ldHOIAAADAAAAAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g","enr:-Mq4QGN7KxE6oPfOL12OB39lDyqC0f6We_tKS29I_Bfm1E-QYIkAJ_bGqdiaLIo95C0gkZU2wCwpTwmTbB9mxKubUGmGAZktgqMvh2F0dG5ldHOIAAAAAAAwAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBCjYQ2EcXVpY4IyyIlzZWNwMjU2azGhAsTb7-gi97EquJelBdOuJxiLZnm-YolSIn8UpE4VXSCwiHN5bmNuZXRzD4N0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
