@@ -14,6 +14,7 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --p2p-quic-port=13000 \
   --min-sync-peers=1 \
   --p2p-max-peers=5 \
+  --no-discovery=true \
   --verbosity=debug \
   --slots-per-archive-point=32 \
   --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
