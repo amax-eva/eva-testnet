@@ -3,6 +3,7 @@ echo $EXTIP
 
 nohup validator --chain-config-file=$PWD/network-configs/config.yaml \
   --accept-terms-of-use=true \
+  --verbosity=debug \
   --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
   --beacon-rest-api-provider=http://${EXTIP}:3500 \
   --disable-monitoring=false \
