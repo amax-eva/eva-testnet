@@ -29,5 +29,6 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
+  --peer="/ip4/18.163.81.118/tcp/13000/p2p/16Uiu2HAmU4pr4m7E93NZvzMo6vrYjgYPcCoaAvAnUmnx2MRPMBy9" \
   --bootstrap-node="enr:-Mq4QIeQ8KswDJtRfsoPKk9-IEYYJBaQRdtuLyc-0dnoWl4-GBFghf66ORxJFFokiVJi3sPyms2KpdzvEZN7CmO-lK2GAZktf3T1h2F0dG5ldHOIAAAAAIABAACEZXRoMpCLUxW_cAAAOP__________gmlkgnY0gmlwhBKjUXaEcXVpY4IyyIlzZWNwMjU2azGhA-T6f0xGg3PgAQopQN0FMIDzO1c6L_Baz9kEdxmnnkogiHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
