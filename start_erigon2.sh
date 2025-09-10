@@ -1,4 +1,5 @@
-EXTIP=$(curl -s ifconfig.me)
+# EXTIP=$(curl -s ifconfig.me)
+EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
 BOOTNODE=$(curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://18.163.81.118:8545 | jq -r '.result.enode')

@@ -1,4 +1,5 @@
-EXTIP=$(curl -s ifconfig.me)
+# EXTIP=$(curl -s ifconfig.me)
+EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
 BOOTNODE=$(curl http://18.163.81.118:3500/eth/v1/node/identity | jq -r '.data.enr')

@@ -1,4 +1,5 @@
-EXTIP=$(curl -s ifconfig.me)
+# EXTIP=$(curl -s ifconfig.me)
+EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
 nohup beacon-chain --chain-id=2248 --network-id=2248 \
