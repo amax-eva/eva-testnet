@@ -1,4 +1,8 @@
 
+rm -rf $PWD/erigon/execution-data/
+
+rm -rf $PWD/prysm/beacon-data/
+
 mkdir -p $PWD/erigon/execution-data/
 
 mkdir -p $PWD/prysm/beacon-data/
