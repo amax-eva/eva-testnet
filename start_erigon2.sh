@@ -1,3 +1,8 @@
+EXTIP=$(curl -s ifconfig.me)
+echo $EXTIP
+
+BOOTNODE=$(curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://18.163.81.118:8545 | jq -r '.result.enode')
+echo $BOOTNODE
 
 nohup erigon --networkid=2248 \
   --verbosity=debug \
@@ -21,5 +26,5 @@ nohup erigon --networkid=2248 \
   --metrics.addr=0.0.0.0 \
   --metrics.port=9001 \
   --torrent.port=42069 \
-  --bootnodes="enode://0cc02cb26258969f360fe737561f3d29c9f180ad605b65f6f648f7a4165ac1245f45383476a3eaec6e69c0cd58ff9ce03d315a582085a8447d661f049d7d502c@18.163.81.118:30303","enode://d560f0223e3014af91122aa44827e44b90aaafe89d42c25f530476c6815675a312d1c8549eb373133690134d3c91f3454a6fac8e471a58b9a5d975352a89aa2f@16.163.97.13:30303" \
+  --bootnodes=$BOOTNODE \
   > $PWD/erigon.log 2>&1 &

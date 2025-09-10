@@ -9,6 +9,6 @@ nohup validator --chain-config-file=$PWD/network-configs/config.yaml \
   --monitoring-host=0.0.0.0 \
   --monitoring-port=8080 \
   --beacon-rpc-provider=${EXTIP}:4000 \
-  --wallet-dir=$PWD/wallets/wallets-one \
+  --wallet-dir=$PWD/wallets/wallets-three \
   --wallet-password-file=$PWD/prysm-password/prysm-password.txt \
   > $PWD/validator.log 2>&1 &

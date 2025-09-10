@@ -1,0 +1,3 @@
+*.log
+erigon/execution-data/
+prysm/beacon-data/

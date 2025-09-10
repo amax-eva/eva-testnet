@@ -1,3 +1,5 @@
+EXTIP=$(curl -s ifconfig.me)
+echo $EXTIP
 
 nohup erigon --networkid=2248 \
   --verbosity=debug \
