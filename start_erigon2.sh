@@ -2,7 +2,7 @@
 EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
-BOOTNODE=$(curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://43.198.212.114:8545 | jq -r '.result.enode')
+BOOTNODE=$(curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://18.163.81.118:8545 | jq -r '.result.enode')
 echo $BOOTNODE
 
 nohup erigon --networkid=2248 \
@@ -27,5 +27,5 @@ nohup erigon --networkid=2248 \
   --metrics.addr=0.0.0.0 \
   --metrics.port=9001 \
   --torrent.port=42069 \
-  --bootnodes=$BOOTNODE \
+  --bootnodes="enode://97e5eb942811a04b18ccc79ff42d5ef4a578622d47826a481557fc0725e9c9ee6c2ce7a361e33937fe7e702e36e8d66b8ed77fbe1eb67bc0315a788ed0984780@172.31.30.93:30303" \
   > $PWD/erigon.log 2>&1 &

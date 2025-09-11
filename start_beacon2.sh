@@ -2,7 +2,7 @@
 EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
-BOOTNODE=$(curl http://43.198.212.114:3500/eth/v1/node/identity | jq -r '.data.enr')
+BOOTNODE=$(curl http://18.163.81.118:3500/eth/v1/node/identity | jq -r '.data.enr')
 echo $BOOTNODE
 
 nohup beacon-chain --chain-id=2248 --network-id=2248 \
@@ -35,8 +35,8 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
-  --peer=$BOOTNODE \
-  --bootstrap-node=$BOOTNODE \
+  --peer="enr:-Mq4QBrObcnfbwi-CCeFEIxD0wg7A5vtCXIvT9MOjuFMjBOyAz8DUKpFbhGh-40ElH4d-klUi45tNal_j5PZ1q1_zaaGAZk4F_GGh2F0dG5ldHOIAAAAAAAwAACEZXRoMpA2kZ8kcAAAOP__________gmlkgnY0gmlwhKwfHl2EcXVpY4IyyIlzZWNwMjU2azGhA4BXZj3m_I61Xdyh9uJdECP2BT7du9t_fz1d2dyBPcN7iHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" \
+  --bootstrap-node="enr:-Mq4QBrObcnfbwi-CCeFEIxD0wg7A5vtCXIvT9MOjuFMjBOyAz8DUKpFbhGh-40ElH4d-klUi45tNal_j5PZ1q1_zaaGAZk4F_GGh2F0dG5ldHOIAAAAAAAwAACEZXRoMpA2kZ8kcAAAOP__________gmlkgnY0gmlwhKwfHl2EcXVpY4IyyIlzZWNwMjU2azGhA4BXZj3m_I61Xdyh9uJdECP2BT7du9t_fz1d2dyBPcN7iHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" \
   > $PWD/beacon.log 2>&1 &
 
 # --no-discovery=false \

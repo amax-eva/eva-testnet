@@ -1,0 +1,92 @@
+
+
+time="2025-09-11 09:25:17" level=info msg="Started discovery v5" ENR="enr:-Mq4QLTHBfMZy5MHccUPxxp3Sts6IwRpZPFjape19z3uI_J9MU8MXcrnkme8f_Fv70GrR_HayppX-SKHgA6TRfG6blSGAZk4F_GFh2F0dG5ldHOIAAAAAAAAAACEZXRoMpA2kZ8kcAAAOP__________gmlkgnY0gmlwhKwfHl2EcXVpY4IyyIlzZWNwMjU2azGhA4BXZj3m_I61Xdyh9uJdECP2BT7du9t_fz1d2dyBPcN7iHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g" prefix=p2p
+
+time="2025-09-11 09:25:17" level=info msg="New node record" ENR=enr:-Mq4QBrObcnfbwi-CCeFEIxD0wg7A5vtCXIvT9MOjuFMjBOyAz8DUKpFbhGh-40ElH4d-klUi45tNal_j5PZ1q1_zaaGAZk4F_GGh2F0dG5ldHOIAAAAAAAwAACEZXRoMpA2kZ8kcAAAOP__________gmlkgnY0gmlwhKwfHl2EcXVpY4IyyIlzZWNwMjU2azGhA4BXZj3m_I61Xdyh9uJdECP2BT7du9t_fz1d2dyBPcN7iHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g prefix=p2p
+
+
+curl http://18.163.81.118:3500/eth/v1/node/identity | jq
+
+{
+  "data": {
+    "peer_id": "16Uiu2HAmMHyqESWABLNmFXfRShLZuuMkGi4svbc3CZTMVLVuw6uG",
+    "enr": "enr:-Mq4QBrObcnfbwi-CCeFEIxD0wg7A5vtCXIvT9MOjuFMjBOyAz8DUKpFbhGh-40ElH4d-klUi45tNal_j5PZ1q1_zaaGAZk4F_GGh2F0dG5ldHOIAAAAAAAwAACEZXRoMpA2kZ8kcAAAOP__________gmlkgnY0gmlwhKwfHl2EcXVpY4IyyIlzZWNwMjU2azGhA4BXZj3m_I61Xdyh9uJdECP2BT7du9t_fz1d2dyBPcN7iHN5bmNuZXRzAIN0Y3CCMsiDdWRwgi7g",
+    "p2p_addresses": [
+      "/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmMHyqESWABLNmFXfRShLZuuMkGi4svbc3CZTMVLVuw6uG",
+      "/ip4/172.31.30.93/udp/13000/quic-v1/p2p/16Uiu2HAmMHyqESWABLNmFXfRShLZuuMkGi4svbc3CZTMVLVuw6uG"
+    ],
+    "discovery_addresses": [
+      "/ip4/172.31.30.93/udp/12000/p2p/16Uiu2HAmMHyqESWABLNmFXfRShLZuuMkGi4svbc3CZTMVLVuw6uG"
+    ],
+    "metadata": {
+      "seq_number": "1",
+      "attnets": "0x0000000000300000"
+    }
+  }
+}
+
+
+
+[INFO] [09-11|09:24:54.596] Started P2P networking                   version=67 self=enode://97e5eb942811a04b18ccc79ff42d5ef4a578622d47826a481557fc0725e9c9ee6c2ce7a361e33937fe7e702e36e8d66b8ed77fbe1eb67bc0315a788ed0984780@172.31.30.93:30304 name=erigon/v3.0.15-1a610b3f/linux-amd64/go1.23.11
+[INFO] [09-11|09:24:54.607] Started P2P networking                   version=68 self=enode://97e5eb942811a04b18ccc79ff42d5ef4a578622d47826a481557fc0725e9c9ee6c2ce7a361e33937fe7e702e36e8d66b8ed77fbe1eb67bc0315a788ed0984780@172.31.30.93:30303 name=erigon/v3.0.15-1a610b3f/linux-amd64/go1.23.11
+
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://18.163.81.118:8545 | jq
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "bd3c9c6acfadb226749ee4b50415fb313b22ee955421527ec7d871bfe6bcf4e4",
+    "name": "erigon/v3.0.15-1a610b3f/linux-amd64/go1.23.11",
+    "enode": "enode://97e5eb942811a04b18ccc79ff42d5ef4a578622d47826a481557fc0725e9c9ee6c2ce7a361e33937fe7e702e36e8d66b8ed77fbe1eb67bc0315a788ed0984780@172.31.30.93:30303",
+    "enr": "enr:-Je4QIgmYsGrwoX_PBJ87vHGS1VL47bHpAnHilSnzXEeOC-NCuGhTxHnA93zx-J6FkcsB0CALWMSihRZggQU38vOuZUFg2V0aMfGhGDiLfSAgmlkgnY0gmlwhKwfHl2Jc2VjcDI1NmsxoQKX5euUKBGgSxjMx5_0LV70pXhiLUeCakgVV_wHJenJ7oN0Y3CCdl-DdWRwgnZf",
+    "ip": "enode://97e5eb942811a04b18ccc79ff42d5ef4a578622d47826a481557fc0725e9c9ee6c2ce7a361e33937fe7e702e36e8d66b8ed77fbe1eb67bc0315a788ed0984780@172.31.30.93:30303",
+    "ports": {
+      "discovery": 30303,
+      "listener": 30303
+    },
+    "listenAddr": "[::]:30303",
+    "protocols": {
+      "eth": {
+        "network": 2248,
+        "difficulty": 0,
+        "genesis": "0x98d4756195d5b6c66088cd6542c842895cf10c529d51691bfc47c138a9e5837b",
+        "config": {
+          "chainName": "",
+          "chainId": 2248,
+          "homesteadBlock": 0,
+          "eip150Block": 0,
+          "eip155Block": 0,
+          "byzantiumBlock": 0,
+          "constantinopleBlock": 0,
+          "petersburgBlock": 0,
+          "istanbulBlock": 0,
+          "berlinBlock": 0,
+          "londonBlock": 0,
+          "terminalTotalDifficulty": 0,
+          "terminalTotalDifficultyPassed": true,
+          "mergeNetsplitBlock": 0,
+          "shanghaiTime": 0,
+          "cancunTime": 0,
+          "pragueTime": 0,
+          "blobSchedule": {
+            "cancun": {
+              "target": 3,
+              "max": 6,
+              "baseFeeUpdateFraction": 3338477
+            },
+            "prague": {
+              "target": 6,
+              "max": 9,
+              "baseFeeUpdateFraction": 5007716
+            }
+          },
+          "depositContractAddress": "0x00000000219ab540356cbb839cbe05303d7705fa"
+        },
+        "head": "0x98d4756195d5b6c66088cd6542c842895cf10c529d51691bfc47c138a9e5837b"
+      }
+    }
+  }
+}
+
+
