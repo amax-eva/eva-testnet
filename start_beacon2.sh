@@ -35,6 +35,7 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
+  --peer=$BOOTNODE \
   --bootstrap-node=$BOOTNODE \
   > $PWD/beacon.log 2>&1 &
 
