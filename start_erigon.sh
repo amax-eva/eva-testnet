@@ -19,6 +19,7 @@ nohup erigon --networkid=2248 \
   --authrpc.addr=0.0.0.0 \
   --authrpc.port=8551 \
   --authrpc.vhosts=* \
+  --snapshots=true \
   --externalcl \
   --metrics \
   --metrics.addr=0.0.0.0 \

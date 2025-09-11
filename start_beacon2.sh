@@ -9,6 +9,7 @@ nohup beacon-chain --chain-id=2248 --network-id=2248 \
   --accept-terms-of-use=true \
   --datadir=$PWD/prysm/beacon-data/ \
   --execution-endpoint=http://${EXTIP}:8551 \
+  --checkpoint-sync-url=http://172.31.20.3:3500 \
   --rpc-host=0.0.0.0 \
   --rpc-port=4000 \
   --http-host=0.0.0.0 \
