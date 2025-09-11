@@ -2,7 +2,7 @@
 EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
-BOOTNODE=$(curl http://18.163.81.118:3500/eth/v1/node/identity | jq -r '.data.enr')
+BOOTNODE=$(curl http://43.198.212.114:3500/eth/v1/node/identity | jq -r '.data.enr')
 echo $BOOTNODE
 
 nohup beacon-chain --chain-id=2248 --network-id=2248 \
