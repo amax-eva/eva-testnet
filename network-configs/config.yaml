@@ -1,7 +1,7 @@
 # Mainnet config
 
 # Extends the mainnet preset
-PRESET_BASE: 'mainnet'
+PRESET_BASE: mainnet
 
 # Free-form short name of the network that this configuration applies to - known
 # canonical network names include:
@@ -10,7 +10,7 @@ PRESET_BASE: 'mainnet'
 # * 'holesky' - testnet
 # * 'hoodi' - testnet
 # Must match the regex: [a-z0-9\-]
-CONFIG_NAME: 'testnet' # needs to exist because of Prysm. Otherwise it conflicts with mainnet genesis
+CONFIG_NAME: testnet # needs to exist because of Prysm. Otherwise it conflicts with mainnet genesis
 
 # Transition
 # ---------------------------------------------------------------
