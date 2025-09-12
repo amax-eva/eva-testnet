@@ -4,14 +4,14 @@ cd /opt/software
 
 ## erigon
 
-wget https://github.com/erigontech/erigon/releases/download/v3.0.15/erigon_v3.0.15_linux_amd64.tar.gz
-tar zxvf erigon_v3.0.15_linux_amd64.tar.gz
-cp erigon_v3.0.15_linux_amd64/erigon /usr/local/bin/
+wget https://github.com/erigontech/erigon/releases/download/v3.0.17/erigon_v3.0.17_linux_amd64.tar.gz
+tar zxvf erigon_v3.0.17_linux_amd64.tar.gz
+cp erigon_v3.0.17_linux_amd64/erigon /usr/local/bin/
 which erigon
 # /usr/local/bin/erigon 
 
 erigon --version
-# erigon version 3.0.15-1a610b3f
+# erigon version 3.0.17-1a610b3f
 
 
 ## beacon-chain
