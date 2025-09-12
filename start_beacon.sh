@@ -15,7 +15,7 @@ nohup beacon-chain \
   --http-host=0.0.0.0 \
   --http-cors-domain=* \
   --http-port=3500 \
-  --p2p-host-ip=127.0.0.1 \
+  --p2p-host-ip=$EXTIP \
   --p2p-tcp-port=13000 \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \

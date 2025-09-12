@@ -1,6 +1,6 @@
 # EXTIP=$(curl -s ifconfig.me)
-# EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
-# echo $EXTIP
+EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
+echo $EXTIP
 
 nohup erigon --networkid=2248 \
   --verbosity=debug \
@@ -10,7 +10,7 @@ nohup erigon --networkid=2248 \
   --http.vhosts=* \
   --ws \
   --allow-insecure-unlock \
-  --nat=extip:127.0.0.1 \
+  --nat=extip:$EXTIP \
   --http \
   --http.addr=0.0.0.0 \
   --http.corsdomain=* \
