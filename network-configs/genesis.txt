@@ -1,0 +1,14 @@
+bash genesis.sh
+
+INFO[0000] eth-beacon-genesis version: git-3f860cf      
+INFO[0000] loaded execution genesis. chainid: 2228      
+INFO[0000] loaded consensus config. genesis fork version: 0x10000038 
+INFO[0000] processing mnemonic 0, for 100 validators    
+INFO[0000] ...validator 100/100                         
+INFO[0000] loaded 100 validators. total balance: 3200 ETH 
+INFO[0000] genesis version: electra                     
+INFO[0000] genesis time: 1757644828                     
+INFO[0000] genesis validators root: 0x7b6bab38ca0e4a41d6fc581eb6654f244a96faa31c10143072fb097cb6ff875a 
+INFO[0000] successfully built genesis state.            
+INFO[0000] serialized genesis state to SSZ file: genesis.ssz 
+serialized genesis state to JSON file: parsedConsensusGenesis.json
