@@ -11,7 +11,7 @@ which erigon
 # /usr/local/bin/erigon 
 
 erigon --version
-# erigon version 3.0.17-1a610b3f
+# erigon version 3.0.17-7d3cab29
 
 
 ## beacon-chain
