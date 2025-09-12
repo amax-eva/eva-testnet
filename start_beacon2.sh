@@ -38,7 +38,7 @@ nohup beacon-chain \
   --chain-config-file=$PWD/network-configs/config.yaml \
   --genesis-state=$PWD/network-configs/genesis.ssz \
   --contract-deployment-block=0 \
-  --peer="/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmRFThA4jLdPf3YcfnF3LKbyUGE4NGD5B7bBxyMGWejeNF" \
+  --peer="/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmFyo8PZqPVq6yVHfSeSrojE2Y3wd3fkqMyF53me24SZ3P" \
   > $PWD/beacon.log 2>&1 &
 
 # --no-discovery=false \
