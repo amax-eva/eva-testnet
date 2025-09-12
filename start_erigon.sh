@@ -11,6 +11,7 @@ nohup erigon --networkid=2248 \
   --ws \
   --allow-insecure-unlock \
   --nat=extip:$EXTIP \
+  --v5disc \
   --http \
   --http.addr=0.0.0.0 \
   --http.corsdomain=* \
