@@ -1,4 +1,4 @@
-EXTIP=192.168.2.1
+EXTIP=127.0.0.1
 echo $EXTIP
 
 nohup beacon-chain --chain-id=2228 --network-id=2228 \

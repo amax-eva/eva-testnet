@@ -1,4 +1,4 @@
-EXTIP=192.168.2.1
+EXTIP=127.0.0.1
 echo $EXTIP
 
 nohup validator --chain-config-file=$PWD/network-configs/config.yaml \
