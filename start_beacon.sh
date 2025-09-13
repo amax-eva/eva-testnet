@@ -2,14 +2,12 @@
 EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
-CHECKPOINT_URL="http://172.31.30.93:3500"
 FEE_RECIPIENT="0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4"
 
 
 nohup beacon-chain \
   --config-file=$PWD/config/beacon.yaml \
   --datadir=$PWD/data/beacon \
-  --checkpoint-sync-url=$CHECKPOINT_URL \
   --p2p-host-ip=$EXTIP \
   --suggested-fee-recipient=$FEE_RECIPIENT \
   --jwt-secret=$PWD/secret/jwt.hex \
