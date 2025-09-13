@@ -10,7 +10,7 @@ nohup validator \
   --chain-config-file=$PWD/network/config.yaml \
   --datadir=$PWD/data/validator \
   --suggested-fee-recipient=$FEE_RECIPIENT \
-  --wallet-dir=$PWD/wallets/wallet1 \
+  --wallet-dir=$PWD/wallets/wallet2 \
   --wallet-password-file=$PWD/secret/prysm-password.txt \
   --log-file=$PWD/logs/validator.log \
   > $PWD/validator.log 2>&1 &
