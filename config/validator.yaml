@@ -1,11 +1,6 @@
-chain-config-file: /network/config.yaml
-datadir: /data/validator
-log-file: /data/logs/validator.log
-wallet-dir: /wallets/wallet1
-wallet-password-file: /secret/prysm-password.txt
-beacon-rest-api-provider: http://beacon:3500
-beacon-rpc-provider: beacon:4000
-suggested-fee-recipient: 0xF84AE3A59D9c8a08b9308Ba4D3d0341135c51989
+beacon-rest-api-provider: http://127.0.0.1:3500
+beacon-rpc-provider: 127.0.0.1:4000
+verbosity: debug
 accept-terms-of-use: true
 disable-monitoring: false
 monitoring-host: 0.0.0.0

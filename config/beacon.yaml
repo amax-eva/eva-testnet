@@ -24,18 +24,3 @@ pprofaddr: 0.0.0.0
 pprofport: 6060
 p2p-static-id: true
 contract-deployment-block: 0
-
-
-
-# suggested-fee-recipient: 0xF84AE3A59D9c8a08b9308Ba4D3d0341135c51989
-# chain-config-file: /network/config.yaml
-# genesis-state: /network/genesis.ssz
-# log-file: /data/logs/beacon.log
-# --datadir=/opt/eva-testnet/prysm/beacon-data/ 
-# --checkpoint-sync-url=http://172.31.30.93:3500 
-# --p2p-host-ip=172.31.30.57 
-# --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 
-# --jwt-secret=/opt/eva-testnet/jwt.hex 
---chain-config-file=/opt/eva-testnet/network-configs/config.yaml 
---genesis-state=/opt/eva-testnet/network-configs/genesis.ssz 
---peer=/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmFyo8PZqPVq6yVHfSeSrojE2Y3wd3fkqMyF53me24SZ3P

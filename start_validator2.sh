@@ -2,15 +2,15 @@
 EXTIP=$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
 echo $EXTIP
 
-nohup validator --chain-config-file=$PWD/network-configs/config.yaml \
-  --accept-terms-of-use=true \
-  --verbosity=debug \
-  --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
-  --beacon-rest-api-provider=http://127.0.0.1:3500 \
-  --disable-monitoring=false \
-  --monitoring-host=0.0.0.0 \
-  --monitoring-port=8080 \
-  --beacon-rpc-provider=127.0.0.1:4000 \
-  --wallet-dir=$PWD/wallets/wallets-two \
-  --wallet-password-file=$PWD/prysm-password/prysm-password.txt \
+FEE_RECIPIENT="0xF84AE3A59D9c8a08b9308Ba4D3d0341135c51989"
+
+
+nohup validator \
+  --config-file=$PWD/config/validator.yaml \
+  --chain-config-file=$PWD/network/config.yaml \
+  --datadir=$PWD/data/validator \
+  --suggested-fee-recipient=$FEE_RECIPIENT \
+  --wallet-dir=$PWD/wallets/wallet1 \
+  --wallet-password-file=$PWD/secret/prysm-password.txt \
+  --log-file: $PWD/logs/validator.log \
   > $PWD/validator.log 2>&1 &
