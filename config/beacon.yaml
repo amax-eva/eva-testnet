@@ -1,31 +1,41 @@
 chain-id: 2248 
 network-id: 2248
-accept-terms-of-use: true
-datadir: /data/beacon/
-log-file: /data/logs/beacon.log
-chain-config-file: /network/config.yaml
-genesis-state: /network/genesis.ssz
-execution-endpoint: http://erigon:8551
+execution-endpoint: http://127.0.0.1:8551
 rpc-host: 0.0.0.0
 rpc-port: 4000
 http-host: 0.0.0.0
 http-cors-domain: "*"
 http-port: 3500
-p2p-host-ip: 192.168.0.100
 p2p-tcp-port: 13000
 p2p-udp-port: 12000
 p2p-quic-port: 13000
 min-sync-peers: 0
+p2p-max-peers=50
 verbosity: debug
 slots-per-archive-point: 32
-suggested-fee-recipient: 0xF84AE3A59D9c8a08b9308Ba4D3d0341135c51989
-jwt-secret: /secret/jwt.hex
 no-discovery: true
 disable-monitoring: false
 monitoring-host: 0.0.0.0
 monitoring-port: 8080
+accept-terms-of-use: true
+no-discovery: true 
 pprof: true
 pprofaddr: 0.0.0.0
 pprofport: 6060
 p2p-static-id: true
 contract-deployment-block: 0
+
+
+
+# suggested-fee-recipient: 0xF84AE3A59D9c8a08b9308Ba4D3d0341135c51989
+# chain-config-file: /network/config.yaml
+# genesis-state: /network/genesis.ssz
+# log-file: /data/logs/beacon.log
+# --datadir=/opt/eva-testnet/prysm/beacon-data/ 
+# --checkpoint-sync-url=http://172.31.30.93:3500 
+# --p2p-host-ip=172.31.30.57 
+# --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 
+# --jwt-secret=/opt/eva-testnet/jwt.hex 
+--chain-config-file=/opt/eva-testnet/network-configs/config.yaml 
+--genesis-state=/opt/eva-testnet/network-configs/genesis.ssz 
+--peer=/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmFyo8PZqPVq6yVHfSeSrojE2Y3wd3fkqMyF53me24SZ3P
