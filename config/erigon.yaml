@@ -10,6 +10,7 @@ http.vhosts: "*"
 ws: true
 ws.port: 8546
 allow-insecure-unlock: true
+v5disc: true
 p2p.protocol: 68
 authrpc.addr: 0.0.0.0
 authrpc.port: 8551
