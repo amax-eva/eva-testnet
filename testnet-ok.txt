@@ -1,0 +1,20 @@
+
+主节点
+
+erigon --networkid=2248 --verbosity=debug --datadir=/opt/eva-testnet/erigon/execution-data --port=30303 --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin --http.vhosts=* --ws --allow-insecure-unlock --nat=extip:172.31.30.93 --v5disc --http --http.addr=0.0.0.0 --http.corsdomain=* --http.port=8545 --authrpc.jwtsecret=/opt/eva-testnet/jwt.hex --authrpc.addr=0.0.0.0 --authrpc.port=8551 --authrpc.vhosts=* --externalcl --metrics --metrics.addr=0.0.0.0 --metrics.port=9001 --torrent.port=42069
+
+beacon-chain --chain-id=2248 --network-id=2248 --datadir=/opt/eva-testnet/prysm/beacon-data --execution-endpoint=http://127.0.0.1:8551 --chain-config-file=/opt/eva-testnet/network-configs/config.yaml --genesis-state=/opt/eva-testnet/network-configs/genesis.ssz --jwt-secret=/opt/eva-testnet/jwt.hex --rpc-host=0.0.0.0 --rpc-port=4000 --http-host=0.0.0.0 --http-cors-domain=* --http-port=3500 --p2p-host-ip=172.31.30.93 --p2p-tcp-port=13000 --p2p-udp-port=12000 --p2p-quic-port=13000 --p2p-static-id=true --p2p-max-peers=50 --min-sync-peers=0 --verbosity=debug --slots-per-archive-point=32 --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 --disable-monitoring=false --monitoring-host=0.0.0.0 --monitoring-port=8080 --accept-terms-of-use=true --no-discovery=true --pprof --pprofaddr=0.0.0.0 --pprofport=6060 --contract-deployment-block=0
+
+validator --chain-config-file=/opt/eva-testnet/network-configs/config.yaml --accept-terms-of-use=true --verbosity=debug --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 --beacon-rest-api-provider=http://127.0.0.1:3500 --disable-monitoring=false --monitoring-host=0.0.0.0 --monitoring-port=8080 --beacon-rpc-provider=127.0.0.1:4000 --wallet-dir=/opt/eva-testnet/wallets/wallets-one --wallet-password-file=/opt/eva-testnet/prysm-password/prysm-password.txt
+
+
+从节点
+
+erigon --networkid=2248 --verbosity=debug --datadir=/opt/eva-testnet/erigon/execution-data --port=30303 --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin --http.vhosts=* --ws --allow-insecure-unlock --nat=extip:172.31.30.57 --http --http.addr=0.0.0.0 --http.corsdomain=* --http.port=8545 --authrpc.jwtsecret=/opt/eva-testnet/jwt.hex --authrpc.addr=0.0.0.0 --authrpc.port=8551 --authrpc.vhosts=* --externalcl --metrics --metrics.addr=0.0.0.0 --metrics.port=9001 --torrent.port=42069 --bootnodes=enode://b6b4b7bae96823c426b612e7d2080e4bcc5c8972d59f3fce983c2a327efc30571c8bc1b275182b54e08a9e2e639af8f35f1556b7a92bd2d6286840d03ef0659a@172.31.30.93:30303
+
+beacon-chain --chain-id=2248 --network-id=2248 --datadir=/opt/eva-testnet/prysm/beacon-data/ --execution-endpoint=http://127.0.0.1:8551 --checkpoint-sync-url=http://172.31.30.93:3500 --rpc-host=0.0.0.0 --rpc-port=4000 --http-host=0.0.0.0 --http-cors-domain=* --http-port=3500 --p2p-host-ip=172.31.30.57 --p2p-tcp-port=13000 --p2p-udp-port=12000 --p2p-quic-port=13000 --min-sync-peers=0 --p2p-max-peers=50 --verbosity=debug --slots-per-archive-point=32 --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 --jwt-secret=/opt/eva-testnet/jwt.hex --disable-monitoring=false --monitoring-host=0.0.0.0 --monitoring-port=8080 --accept-terms-of-use=true --no-discovery=true --pprof --pprofaddr=0.0.0.0 --pprofport=6060 --p2p-static-id=true --chain-config-file=/opt/eva-testnet/network-configs/config.yaml --genesis-state=/opt/eva-testnet/network-configs/genesis.ssz --contract-deployment-block=0 --peer=/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmFyo8PZqPVq6yVHfSeSrojE2Y3wd3fkqMyF53me24SZ3P
+
+
+validator --chain-config-file=/opt/eva-testnet/network-configs/config.yaml --accept-terms-of-use=true --verbosity=debug --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 --beacon-rest-api-provider=http://127.0.0.1:3500 --disable-monitoring=false --monitoring-host=0.0.0.0 --monitoring-port=8080 --beacon-rpc-provider=127.0.0.1:4000 --wallet-dir=/opt/eva-testnet/wallets/wallets-two --wallet-password-file=/opt/eva-testnet/prysm-password/prysm-password.txt
+
+
