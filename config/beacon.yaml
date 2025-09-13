@@ -13,7 +13,6 @@ min-sync-peers: 0
 p2p-max-peers: 50
 verbosity: debug
 slots-per-archive-point: 32
-no-discovery: true
 disable-monitoring: false
 monitoring-host: 0.0.0.0
 monitoring-port: 8080
