@@ -12,5 +12,5 @@ nohup validator \
   --suggested-fee-recipient=$FEE_RECIPIENT \
   --wallet-dir=$PWD/wallets/wallet1 \
   --wallet-password-file=$PWD/secret/prysm-password.txt \
-  --log-file: $PWD/logs/validator.log \
+  --log-file=$PWD/logs/validator.log \
   > $PWD/validator.log 2>&1 &
