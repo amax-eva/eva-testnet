@@ -1,3 +1,7 @@
 *.log
 erigon/execution-data/
 prysm/beacon-data/
+
+data/beacon/
+data/validator/
+data/logs/
