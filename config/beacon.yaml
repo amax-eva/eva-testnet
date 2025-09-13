@@ -10,7 +10,7 @@ p2p-tcp-port: 13000
 p2p-udp-port: 12000
 p2p-quic-port: 13000
 min-sync-peers: 0
-p2p-max-peers=50
+p2p-max-peers: 50
 verbosity: debug
 slots-per-archive-point: 32
 no-discovery: true
